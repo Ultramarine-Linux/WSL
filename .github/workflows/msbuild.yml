@@ -39,7 +39,7 @@ jobs:
 
     - name: Download WSL rootfs
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: wget https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-x86_64.tar.gz -o install.tar.gz
+      run: Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-x86_64.tar.gz -OutFile install.tar.gz
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
