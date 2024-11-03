@@ -39,11 +39,15 @@ jobs:
 
     - name: Create rootfs subdirectories
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: mkdir x64
+      run: |
+        mkdir x64
+        mkdir ARM64
 
-    - name: Download WSL rootfs
+    - name: Download WSL roots
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-x86_64.tar.gz -OutFile x64\install.tar.gz
+      run: |
+        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-x86_64.tar.gz -OutFile x64\install.tar.gz
+        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-aarch64.tar.gz -OutFile ARM64\install.tar.gz
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
