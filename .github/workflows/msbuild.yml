@@ -39,7 +39,7 @@ jobs:
 
     - name: Create rootfs subdirectories
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: mkdir x64 ARM64
+      run: mkdir x64
 
     - name: Download WSL rootfs
       working-directory: ${{env.GITHUB_WORKSPACE}}/x64
