@@ -55,4 +55,5 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: |
         msbuild /m /nr:true /t:Build /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=x64 /p:UapAppxPackageBuildMode=StoreUpload /p:AppxPackageSigningEnabled=false /p:AppxBundlePlatforms="x64" ${{env.SOLUTION_FILE_PATH}}
-        ls x64\Release x64\Release\Upload
+        ls x64\Release
+        ls x64\Release\Upload
