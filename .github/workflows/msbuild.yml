@@ -47,8 +47,8 @@ jobs:
     - name: Download WSL roots
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-x86_64.wsl -OutFile x64\install.tar.gz
-        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/41/wsl-wsl-aarch64.wsl -OutFile ARM64\install.tar.gz
+        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/42/ports-wsl-wsl-x86_64.tar.gz -OutFile x64\install.tar.gz
+        Invoke-WebRequest https://images.fyralabs.com/images/ultramarine/42/ports-wsl-wsl-aarch64.tar.gz -OutFile ARM64\install.tar.gz
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
